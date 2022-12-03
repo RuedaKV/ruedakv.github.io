@@ -1,0 +1,428 @@
+:root {
+  --main-bg-color: #474350;
+  --main-text-color: #f8fff4;
+  --secondary-color: #c4d6b0;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+h1,
+h2,
+p {
+  color: var(--main-text-color);
+}
+
+
+/* NAV BAR  */
+
+nav.nav-bar {
+  background-color: var(--secondary-color);
+  color: black;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 1000;
+  display: relative;
+}
+
+nav.nav-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+nav.nav-bar li {
+  display: inline-block;
+  font-family: lust, serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 5px;
+  user-select: none;
+  opacity: 30%;
+  padding: 1vh;
+}
+
+nav.nav-bar ul {
+  list-style: none;
+  cursor: pointer;
+}
+
+nav.nav-bar li:hover {
+  text-decoration: underline;
+  opacity: 100%;
+}
+
+#nav-li-current {
+  color: #000;
+  opacity: 100%;
+}
+
+#nav-icons {
+  margin-left: auto;
+  margin-right: 2.5vw;
+  opacity: 100%;
+  float: right;
+}
+
+.nav-icon {
+  padding: 1vh;
+  border-radius: 12px;
+  font-size: 24px !important;
+}
+
+.nav-icon:hover {
+  color: var(--secondary-color);
+  background-color: #000;
+}
+
+/* PAGE HEADERS */
+.projects-header,
+.about-me-header,
+.resume-header {
+  font-size: 55px;
+  text-align: center;
+  font-family: lust, serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 15px;
+  margin-top: 15vh;
+}
+
+/* ABOUT ME */
+
+.about-me-container,
+.contact-me-description {
+  font-size: 18px;
+  font-family: expo-serif-pro, serif;
+  font-weight: 300;
+  font-style: normal;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-me-list {
+  color: var(--main-text-color);
+}
+
+.about-me-gallery {
+  margin: auto;
+  align-items: center;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+}
+
+.about-me-image {
+  height: 50vh;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  border-color: var(--secondary-color);
+  border-style: solid;
+  border-radius: 30px;
+  border-width: 5px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.back-button,
+.next-button {
+  display: flex;
+  position: absolute;
+  height: 10vh;
+  width: 5vw;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  bottom: 45%;
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.back-button {
+  left: 0;
+}
+.next-button {
+  right: 0;
+}
+
+.back-button:hover, .next-button:hover {
+  opacity: 30%;
+}
+
+.icon {
+  margin: auto;
+}
+
+/* PROJECTS  */
+
+.projects-container {
+  width: 75vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-column-gap: 3vw;
+  grid-row-gap: 3vh;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+}
+
+.project-card {
+  width: 25vw;
+  padding: 10px;
+  border-style: solid;
+  border-color: var(--secondary-color);
+  border-radius: 16px;
+  border-width: 5px;
+  position: relative;
+}
+
+.project-card:hover {
+  opacity: 30%;
+  cursor: pointer;
+}
+
+.project-title, .project-more-information-subhead {
+  font-size: 36px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: nunito-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.project-image {
+  width: 90%;
+  height: 30vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.project-description {
+  font-size: 18px;
+  font-family: expo-serif-pro, serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.project-overlay {
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  width: 100%;
+  color: red;
+  font-size: 36px;
+  font-family: lust, serif;  
+  font-weight: 300;
+  font-style: normal;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background-color: black;
+  width: 80%;
+}
+
+.project-more-information {
+  text-decoration: none;
+}
+
+.project-more-information-image {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.project-more-information-subhead {
+  text-align: left;
+  color: var(--secondary-color)
+}
+
+
+
+
+
+/* RESUME  */
+.resume-frame {
+  border-radius: 16px;
+  border-style: solid;
+  border-color: var(--secondary-color);
+  display: block;
+  margin: 0 auto;
+  border-width: 5px;
+}
+
+/* CONTACT FORM */
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid gainsboro;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size: 14px;
+  font-family: expo-serif-pro, serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+input[type="submit"], .project-button  {
+  background-color: var(--secondary-color);
+  color: var(--main-bg-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: expo-serif-pro, serif;
+  font-weight: 300;
+  font-style: normal;
+  border-color: var(--main-bg-color);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 16px;
+}
+
+.project-button {
+  font-size: 24px;
+  width: 20vw;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+
+input[type="submit"]:hover, .project-button:hover {
+  background-color: var(--main-bg-color);
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.form-container {
+  width: 50vw;
+  border-radius: 5px;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  font-family: expo-serif-pro, serif;
+  font-weight: 300;
+  font-style: normal;
+  border-color: var(--secondary-color);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 16px;
+}
+
+.bio-link, .project-button-link  {
+  text-decoration: none;
+  color: var(--secondary-color)
+}
+
+.bio-link:visited, .project-button-link:visited {
+  color: var(--secondary-color)
+}
+
+.bio-link:hover {
+  color: var(--main-bg-color);
+  background-color: var(--secondary-color)
+}
+
+
+
+/* MOBILE STYLING */
+@media screen and (max-width: 900px) {
+  nav.nav-bar{
+    height: 20%;
+  }
+
+  .form-container {
+    width: 80vw;
+    height: auto;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  .project-card {
+    margin: 0 auto;
+    width: 40vw;
+  }
+
+  .about-me-container {
+    width: 90vw;
+  }
+
+  .about-me-image{
+    width: 80vw;
+    height: auto;
+  }
+
+
+  .project-button {
+    width: 60vw;
+  }
+
+  
+
+  
+
+ 
+
+.projects-header,
+  .about-me-header,
+  .resume-header {
+  margin-top: 20vh;
+} 
+}
+
+@media screen and (max-width: 600px) {
+  
+
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .project-card {
+    margin: 0 auto;
+    width: 80vw;
+  }
+
+  .project-image {
+    height: auto;
+    /* object-fit: fill; */
+  }
+
+  
+
+  
+}
